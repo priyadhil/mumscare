@@ -3,7 +3,7 @@ sculp them all into root elements,
 so tat  it can be used any other elements  */
 :root {
   --container-bg-color: #333;
-  --left-bg-color: rgba(230, 170, 7, 0.5);
+  --left-bg-color: #e6aa0780;
   --left-button-hover-color: rgba(146, 110, 11, 0.3);
   --right-bg-color: rgba(110, 108, 108, 0.5);
   --right-button-hover-color: rgba(75, 73, 73, 0.3);
@@ -19,6 +19,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  color: #5c5b5b;
 }
 h1 {
   font-size: 3rem;
@@ -114,4 +115,132 @@ h1 {
 }
 .hover-right .left:before {
   z-index: 2;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+}
+
+ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  background: #181717;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  font-size: 25px;
+  color: #666;
+  transition: 0.5s;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 1s;
+  transform: scale(1.5);
+  z-index: -3;
+}
+
+ul li a:hover:before {
+  transform: scale(1.5);
+  box-shadow: 15px #5c5b5b;
+  filter: blur(5px);
+}
+ul li:nth-child(1) a {
+  color: #4167b2;
+  border: 0.7px solid;
+  transition: 1.5s;
+}
+ul li:nth-child(2) a {
+  color: #009f01;
+  border: 0.7px solid;
+  transition: 1.5s;
+}
+ul li:nth-child(3) a {
+  color: #74453d;
+  border: 0.7px solid;
+  transition: 1.5s;
+}
+ul li:nth-child(4) a {
+  color: #fe0000;
+  border: 0.7px solid;
+  transition: 1.5s;
+}
+ul li:nth-child(5) a {
+  color: #1da1f3;
+  border: 0.7px solid;
+  transition: 1.5s;
+}
+ul li:nth-child(1) a:hover {
+  color: #4167b2;
+  box-shadow: 5px 5px #4e7ad1, -5px -5px #4e7ad1;
+  text-shadow: 0 0 15px #5c8beb;
+  transform: rotate(-360deg);
+  transition: 1s;
+  border-radius: 50%;
+  border: 1px solid;
+}
+ul li:nth-child(2) a:hover {
+  color: #009f01;
+  box-shadow: 5px 5px #15f515, -5px -5px #15f515;
+  text-shadow: 0 0 15px #15f515;
+  transform: rotate(-360deg);
+  transition: 1s;
+  border-radius: 50%;
+  border: 0.5px solid;
+}
+
+ul li:nth-child(3) a:hover {
+  color: #74453d;
+  box-shadow: 5px 5px #b1876e, -5px -5px #b1876e;
+  text-shadow: 0 0 15px #b1876e;
+  transform: rotate(-360deg);
+  transition: 1s;
+  border-radius: 50%;
+  border: 0.5px solid;
+}
+ul li:nth-child(4) a:hover {
+  color: #fe0000;
+  box-shadow: 5px 5px #fa6565, -5px -5px #fa6565;
+  text-shadow: 0 0 15px #fa6565;
+  transform: rotate(-360deg);
+  transition: 1s;
+  border-radius: 50%;
+  border: 0.5px solid;
+}
+ul li:nth-child(5) a:hover {
+  color: #1da1f3;
+  box-shadow: 5px 5px #1da1f3, -5px -5px #1da1f3;
+  text-shadow: 0 0 15px #1da1f3;
+  transform: rotate(-360deg);
+  transition: 1s;
+  border-radius: 50%;
+  border: 0.5px solid;
 }
