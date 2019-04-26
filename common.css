@@ -2,7 +2,7 @@
 sculp them all into root elements, 
 so tat  it can be used any other elements  */
 :root {
-  --container-bg-color: #333;
+  --container-bg-color: rgb(51, 51, 51);
   --left-bg-color: #e6aa0780;
   --left-button-hover-color: rgba(146, 110, 11, 0.3);
   --right-bg-color: rgba(110, 108, 108, 0.5);
@@ -16,8 +16,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   color: #5c5b5b;
 }
@@ -64,7 +64,7 @@ h1 {
 .split {
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 80%;
   overflow: hidden;
 }
 .split.left {
@@ -122,9 +122,11 @@ ul {
   padding: 0;
   display: flex;
   position: absolute;
-  top: 70%;
-  left: 10%;
-  transform: translate(-10%, -50%);
+
+  left: 50%;
+  top: 85%;
+  transform: translate(-49%, -10%);
+  transition: linear;
 }
 
 ul li {
@@ -163,15 +165,16 @@ ul li a:before {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  transition: 1s;
+  transition: 3s;
   transform: scale(1.5);
-  z-index: -3;
+  z-index: -1;
 }
 
 ul li a:hover:before {
   transform: scale(1.5);
-  box-shadow: 15px #5c5b5b;
-  filter: blur(5px);
+  transition: 3s;
+  /* box-shadow: 15px #5c5b5b;
+  filter: blur(5px); */
 }
 ul li:nth-child(1) a {
   color: #4167b2;
