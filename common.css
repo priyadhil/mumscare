@@ -79,7 +79,7 @@ h2 {
 }
 .split.left {
   left: 0;
-  background: url("img/art-background-blank-1020317.jpg") center center
+  background: url("./img/art-background-blank-1020317.jpg") center center
     no-repeat;
   background-size: cover;
 }
@@ -92,7 +92,7 @@ h2 {
 }
 .split.right {
   right: 0;
-  background: url("img/baby-child-hand-1776137.jpg") center center no-repeat;
+  background: url("./img/baby-child-hand-1776137.jpg") center center no-repeat;
   background-size: cover;
 }
 .split.right:before {
